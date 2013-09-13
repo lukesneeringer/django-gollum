@@ -1,0 +1,45 @@
+# Apple
+.DS_Store
+
+# Python
+*.egg-info
+*.pyc
+__pycache__
+
+# PyCharm  
+.idea/
+
+# Testing
+.coverage
+.coverage.*
+.coverage-html/
+.tox/
+
+# Vagrant
+.vagrant/
+
+# Chef
+Berksfile.lock
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# Kitchen
+.kitchen/
+.kitchen.local.yml
+
+# Node.js
+node_modules/
+
+# SASS
+.sass-cache
+
+# vim
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
