@@ -22,6 +22,15 @@ FORM_ERROR_CSS_CLASS
 If specified, the given CSS class will be added to every field that is
 in an error state on every gollum form.
 
+FORM_GLOBAL_CSS_CLASS
+---------------------
+
+* Default: *(not set)*
+* Type: ``str``
+
+If specified, the given CSS class will be added to every field, period,
+the end.
+
 FORM_REQUIRED_ATTRS
 -------------------
 

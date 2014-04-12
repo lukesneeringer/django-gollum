@@ -72,6 +72,8 @@ class BoundField(DjangoBoundField):
             answer.add(settings.FORM_REQUIRED_CSS_CLASS)
         if self.errors and hasattr(settings, 'FORM_ERROR_CSS_CLASS'):
             answer.add(settings.FORM_ERROR_CSS_CLASS)
+        if hasattr(settings, 'FORM_GLOBAL_CSS_CLASS'):
+            answer.add(settings.FORM_GLOBAL_CSS_CLASS)
 
         # Return the final answer.
         return ' '.join(answer)

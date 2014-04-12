@@ -82,6 +82,18 @@ class BoundFieldSuite(unittest.TestCase):
         assert not re.search(r'class="[\s\w-]*error[\s\w-]*"', foo_output)
         assert re.search(r'class="[\s\w-]*error[\s\w-]*"', bar_output)
 
+    def test_global_css_class(self):
+        """Establish that the `FORM_GLOBAL_CSS_CLASS` setting works
+        as intended.
+        """
+        form = self.form_class({ 'foo': 'eggs', 'bar': 'baz' })
+        form.is_valid()
+        with override_settings(FORM_GLOBAL_CSS_CLASS='global'):
+            foo_output = six.text_type(form['foo'])
+            bar_output = six.text_type(form['bar'])
+        assert re.search(r'class="[\s\w-]*global[\s\w-]*"', foo_output)
+        assert re.search(r'class="[\s\w-]*global[\s\w-]*"', bar_output)
+
     def test_css_from_widget_class(self):
         """Establish that a CSS class on a widget itself is included
         in the BoundField output.
